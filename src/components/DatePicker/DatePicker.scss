@@ -1,0 +1,44 @@
+@use "../../assets/styles/colors" as *;
+@use "../../assets/styles/text-styles" as *;
+
+.date-picker {
+  width: calc(7 * 32px);
+  background-color: $pale-orange;
+}
+
+.date-picker__dates {
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  row-gap: 0;
+}
+
+.date-picker__date {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: $pale-orange;
+}
+
+.date-picker__date--selected {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-blue;
+  cursor: pointer;
+}
+
+.date-picker__date--between {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $success-200;
+  cursor: pointer;
+}

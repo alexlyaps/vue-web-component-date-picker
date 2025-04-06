@@ -1,0 +1,53 @@
+@use 'sass:map';
+
+$text-sizes: (
+  text-xs: (
+    font-size: 12px,
+    line-height: 18px,
+  ),
+  text-sm: (
+    font-size: 14px,
+    line-height: 20px,
+  ),
+  text-md: (
+    font-size: 16px,
+    line-height: 24px,
+  ),
+  text-lg: (
+    font-size: 18px,
+    line-height: 28px,
+  ),
+  text-xl: (
+    font-size: 20px,
+    line-height: 30px,
+  ),
+  display-xs: (
+    font-size: 24px,
+    line-height: 32px,
+  ),
+  display-sm: (
+    font-size: 30px,
+    line-height: 38px,
+  ),
+  display-md: (
+    font-size: 36px,
+    line-height: 44px,
+  ),
+  display-lg: (
+    font-size: 48px,
+    line-height: 60px,
+  ),
+  display-xl: (
+    font-size: 60px,
+    line-height: 72px,
+  ),
+  display-2xl: (
+    font-size: 72px,
+    line-height: 90px,
+  ),
+);
+
+@mixin text-size($size) {
+  font-size: map.get(map.get($text-sizes, $size), font-size);
+  line-height: map.get(map.get($text-sizes, $size), line-height);
+}

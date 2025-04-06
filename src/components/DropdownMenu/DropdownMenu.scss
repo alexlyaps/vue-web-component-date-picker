@@ -1,0 +1,89 @@
+@use "../../assets/styles/colors" as *;
+@use "../../assets/styles/text-styles" as *;
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid $gray-100;
+  border-radius: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  z-index: 10;
+
+  &.dropdown-menu--offset {
+    top: 100%;
+    left: -200px;
+    max-width: 240px;
+    width: 240px;
+    max-height: unset;
+  }
+
+  &.dropdown-menu--offset-right {
+    top: 100%;
+    left: 0px;
+    max-width: 240px;
+    width: 240px;
+    max-height: unset;
+  }
+
+  &.dropdown-menu--offset-wide {
+    top: 110%;
+    left: -180px;
+    width: 320px;
+    max-height: unset;
+  }
+
+  &.dropdown-menu--offset-center {
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    max-height: unset;
+  }
+
+  &.dropdown-menu--pressed-bottom {
+    top: auto;
+    bottom: 40px;
+    left: -4px;
+    max-width: 240px;
+    width: 240px;
+  }
+}
+
+.dropdown-menu__item {
+  padding: 8px 16px;
+  cursor: pointer;
+  @include text-size(text-md);
+  color: $gray-700;
+}
+
+.dropdown-menu__item--sm {
+  text-align: left;
+  padding: 10px 16px;
+  cursor: pointer;
+  @include text-size(text-sm);
+  font-weight: 500;
+  color: $gray-700;
+}
+
+.dropdown-menu__item:hover {
+  background-color: $gray-100;
+}
+
+.dropdown-menu__item--selected {
+  background-color: $gray-200;
+}
+
+.dropdown-menu__item--danger {
+  color: $error-500;
+}
+
+.dropdown-menu__item--danger:hover {
+  background-color: $error-100;
+}

@@ -1,0 +1,91 @@
+@use '../../assets/styles/colors' as *;
+@use '../../assets/styles/text-styles' as *;
+
+.text {
+  & > a {
+    color: inherit;
+  }
+}
+
+/* Sizes */
+.text--text-xs {
+  @include text-size(text-xs);
+}
+
+.text--text-sm {
+  @include text-size(text-sm);
+}
+
+.text--text-md {
+  @include text-size(text-md);
+}
+
+.text--text-lg {
+  @include text-size(text-lg);
+}
+
+.text--text-xl {
+  @include text-size(text-xl);
+}
+
+.text--display-xs {
+  @include text-size(display-xs);
+}
+
+.text--display-sm {
+  @include text-size(display-sm);
+}
+
+.text--display-md {
+  @include text-size(display-md);
+  letter-spacing: 0.02em;
+}
+
+.text--display-lg {
+  @include text-size(display-lg);
+  letter-spacing: 0.02em;
+}
+
+.text--display-xl {
+  @include text-size(display-xl);
+  letter-spacing: 0.02em;
+}
+
+.text--display-2xl {
+  @include text-size(display-2xl);
+  letter-spacing: 0.02em;
+}
+
+/* Weights */
+.text--regular {
+  font-weight: 400;
+}
+
+.text--medium {
+  font-weight: 500;
+}
+
+.text--semibold {
+  font-weight: 600;
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+/* Align */
+.text--left {
+  text-align: left;
+}
+.text--center {
+  text-align: center;
+}
+.text--right {
+  text-align: right;
+}
+
+.text--text-overflow-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,195 @@
+@use "@/assets/styles/_colors" as *;
+@use "../../assets/styles/text-styles" as *;
+
+.button-base {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.2s;
+
+  &.button-base--disabled {
+    cursor: default;
+  }
+
+  &.button-base--fullwidth {
+    width: 100%;
+  }
+
+  &.button-base--justify-left {
+    justify-content: flex-start;
+  }
+}
+
+/* Sizes */
+.button-base--sm {
+  padding: 7px 13px;
+  @include text-size(text-sm);
+}
+.button-base--md {
+  padding: 9px 15px;
+  @include text-size(text-sm);
+}
+.button-base--lg {
+  padding: 9px 17px;
+  @include text-size(text-md);
+}
+.button-base--xl {
+  padding: 11px 19px;
+  @include text-size(text-md);
+}
+.button-base--2xl {
+  padding: 15px 27px;
+  @include text-size(text-lg);
+}
+
+/* Sizes button with single icon */
+.button-base-single-icon--sm {
+  padding: 5px;
+}
+.button-base-single-icon--md {
+  padding: 9px;
+}
+.button-base-single-icon--lg {
+  padding: 11px;
+}
+.button-base-single-icon--xl {
+  padding: 13px;
+}
+.button-base-single-icon--2xl {
+  padding: 15px;
+}
+
+/* Variants */
+.button-base--primary {
+  background-color: $primary-600;
+  border: 1px solid $primary-600;
+  color: $white;
+
+  &:hover {
+    background-color: $primary-700;
+    border: 1px solid $primary-700;
+  }
+
+  &:focus {
+    box-shadow:
+      0 0 0 4px $outline-primary-color,
+      0 0 0 4px $outline-gray-color;
+  }
+
+  &.button-base--disabled {
+    background-color: $primary-200;
+    border: 1px solid $primary-200;
+  }
+}
+
+.button-base--secondary {
+  background-color: $primary-50;
+  border: 1px solid $primary-50;
+  color: $primary-700;
+
+  &:hover {
+    background-color: $primary-100;
+  }
+
+  &:focus {
+    box-shadow:
+      0 0 0 4px $outline-primary-color,
+      0 0 0 4px $outline-gray-color;
+  }
+
+  &.button-base--disabled {
+    background-color: $primary-25;
+    color: $primary-300;
+  }
+}
+
+.button-base--secondary_gray {
+  background-color: $white;
+  border: 1px solid $gray-300;
+  color: $gray-700;
+
+  &:hover {
+    background-color: $gray-50;
+  }
+
+  &:focus {
+    box-shadow:
+      0 0 0 4px $gray-100,
+      0 1px 2px 0 $outline-gray-color;
+  }
+
+  &.button-base--disabled {
+    background-color: $white;
+    color: $gray-300;
+  }
+}
+
+.button-base--tertiary {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: $primary-700;
+
+  &:hover {
+    background-color: $primary-50;
+  }
+
+  &.button-base--disabled {
+    color: $gray-300;
+  }
+}
+
+.button-base--tertiary_gray {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: $gray-500;
+
+  &:hover {
+    background-color: $gray-50;
+  }
+
+  &.button-base--disabled {
+    color: $gray-300;
+  }
+}
+
+.button-base--link_color {
+  background-color: transparent;
+  color: $primary-700;
+  padding: 0;
+
+  &:hover {
+    color: $primary-800;
+  }
+
+  &.button-base--disabled {
+    color: $gray-300;
+  }
+}
+
+.button-base--link_gray {
+  background-color: transparent;
+  color: $plum-blue;
+  padding: 0;
+
+  &:hover {
+    color: $dark-blue;
+  }
+
+  &.button-base--disabled {
+    color: $gray-300;
+  }
+}
+
+.link {
+  text-decoration: none;
+}

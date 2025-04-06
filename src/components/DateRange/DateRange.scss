@@ -1,0 +1,50 @@
+@use "../../assets/styles/colors" as *;
+@use "../../assets/styles/text-styles" as *;
+
+.date-range-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .date-range-content {
+    display: grid;
+    padding: 16px 32px;
+
+    grid-template-areas:
+      "badges badges"
+      "left right";
+
+    .date-range-content__badges {
+      background-color: $pale-orange;
+      grid-area: badges;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: center;
+      border-top-right-radius: 16px;
+      border-top-left-radius: 16px;
+      border: 1px solid $success-400;
+    }
+
+    .date-range-content__left {
+      background-color: $pale-orange;
+      grid-area: left;
+      padding: 24px;
+      border-bottom-left-radius: 16px;
+      border: 1px solid $success-400;
+      border-top: 0;
+    }
+
+    .date-range-content__right {
+      background-color: $pale-orange;
+      grid-area: right;
+      padding: 24px;
+      border-right: 1px solid $success-400;
+      border-bottom: 1px solid $success-400;
+      border-bottom-right-radius: 16px;
+    }
+
+    .input-container {
+      width: calc(7 * 32px);
+    }
+  }
+}

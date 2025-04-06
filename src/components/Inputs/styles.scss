@@ -1,0 +1,166 @@
+@use "../../assets/styles/colors" as *;
+@use "../../assets/styles/text-styles" as *;
+
+@mixin input-base {
+  border: 1px solid $success-400;
+  border-radius: 8px;
+  padding: 7px 14px;
+  height: 40px;
+  color: $gray-900;
+  @include text-size(text-md);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  width: 40%;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  z-index: 10;
+}
+
+.dropdown-menu--wide {
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-label {
+  @include text-size(text-sm);
+  color: $gray-700;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  @include input-base;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+
+  &.width--narrow {
+    width: 75px;
+  }
+
+  &.width--wide {
+    width: 100%;
+  }
+
+  &:focus-within {
+    border: 1px solid $primary-300;
+    box-shadow:
+      0 0 0 4px $outline-primary-color,
+      0 0 0 4px $outline-gray-color;
+  }
+
+  &.input-wrapper--disabled {
+    background-color: $gray-50;
+  }
+
+  &.has-error {
+    border-color: $error-300;
+
+    &:focus-within {
+      box-shadow:
+        0 0 0 4px $outline-error-color,
+        0 0 0 4px $outline-gray-color;
+    }
+
+    .right-icon {
+      color: $error-500;
+    }
+  }
+
+  .input-element {
+    flex: 1;
+    border: none;
+    outline: none;
+    color: $gray-900;
+    @include text-size(text-md);
+    min-width: 0;
+
+    &::placeholder {
+      color: $gray-500;
+    }
+
+    &:disabled {
+      background: $gray-50;
+    }
+  }
+
+  .icon {
+    display: inline-flex;
+  }
+
+  .left-icon {
+    color: $gray-500;
+    margin-right: 8px;
+  }
+
+  .right-icon {
+    color: $gray-400;
+    margin-left: 8px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.input-hint {
+  @include text-size(text-sm);
+  color: $gray-500;
+}
+
+.input-error {
+  @include text-size(text-sm);
+  color: $error-500;
+}
+
+.chevron-icon {
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
+  color: $gray-500;
+
+  &.chevron-icon--rotated {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.input-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-dropdown__input {
+  @include input-base;
+  @include text-size(text-md);
+  width: 100%;
+  cursor: pointer;
+  color: $gray-900;
+
+  &::placeholder {
+    color: $gray-900;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

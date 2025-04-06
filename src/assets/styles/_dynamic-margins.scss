@@ -1,0 +1,49 @@
+$indent-values: 2, 3, 4, 8, 10, 12, 16, 20, 24, 32, 40, 64, 96;
+
+@mixin bottom-indent-classes {
+  @each $value in $indent-values {
+    .bottom-indent--#{$value} {
+      margin-bottom: #{$value}px;
+    }
+  }
+}
+
+@mixin top-indent-classes {
+  @each $value in $indent-values {
+    .top-indent--#{$value} {
+      margin-top: #{$value}px;
+    }
+  }
+}
+
+@mixin left-indent-classes {
+  @each $value in $indent-values {
+    .left-indent--#{$value} {
+      margin-left: #{$value}px;
+    }
+  }
+}
+
+@mixin right-indent-classes {
+  @each $value in $indent-values {
+    .right-indent--#{$value} {
+      margin-right: #{$value}px;
+    }
+  }
+}
+
+@mixin column-gap-classes {
+  @each $value in $indent-values {
+    .column-gap--#{$value} {
+      column-gap: #{$value}px;
+    }
+  }
+}
+
+@mixin row-gap-classes {
+  @each $value in $indent-values {
+    .row-gap--#{$value} {
+      row-gap: #{$value}px;
+    }
+  }
+}

@@ -1,0 +1,260 @@
+@use "colors" as *;
+@use "text-styles" as *;
+@use "dynamic-margins" as *;
+
+@font-face {
+  font-family: "Felipa";
+  src: url("@/assets/fonts/Felipa-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+html,
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+input,
+td,
+th,
+caption,
+address,
+textarea,
+legend,
+blockquote,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+}
+
+img {
+  border: 0;
+}
+
+body {
+  font-family: "Felipa", serif;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch !important;
+  overflow: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.color--white {
+  color: $white;
+}
+
+.color--gray-25 {
+  color: $gray-25;
+}
+.color--gray-50 {
+  color: $gray-50;
+}
+.color--gray-100 {
+  color: $gray-100;
+}
+.color--gray-200 {
+  color: $gray-200;
+}
+.color--gray-300 {
+  color: $gray-300;
+}
+.color--gray-400 {
+  color: $gray-400;
+}
+.color--gray-500 {
+  color: $gray-500;
+}
+.color--gray-600 {
+  color: $gray-600;
+}
+.color--gray-700 {
+  color: $gray-700;
+}
+.color--gray-800 {
+  color: $gray-800;
+}
+.color--gray-900 {
+  color: $gray-900;
+}
+
+.color--primary-25 {
+  color: $primary-25;
+}
+.color--primary-50 {
+  color: $primary-50;
+}
+.color--primary-100 {
+  color: $primary-100;
+}
+.color--primary-200 {
+  color: $primary-200;
+}
+.color--primary-300 {
+  color: $primary-300;
+}
+.color--primary-400 {
+  color: $primary-400;
+}
+.color--primary-500 {
+  color: $primary-500;
+}
+.color--primary-600 {
+  color: $primary-600;
+}
+.color--primary-700 {
+  color: $primary-700;
+}
+.color--primary-800 {
+  color: $primary-800;
+}
+.color--primary-900 {
+  color: $primary-900;
+}
+
+.color--error-25 {
+  color: $error-25;
+}
+.color--error-50 {
+  color: $error-50;
+}
+.color--error-100 {
+  color: $error-100;
+}
+.color--error-200 {
+  color: $error-200;
+}
+.color--error-300 {
+  color: $error-300;
+}
+.color--error-400 {
+  color: $error-400;
+}
+.color--error-500 {
+  color: $error-500;
+}
+.color--error-600 {
+  color: $error-600;
+}
+.color--error-700 {
+  color: $error-700;
+}
+.color--error-800 {
+  color: $error-800;
+}
+.color--error-900 {
+  color: $error-900;
+}
+
+.color--warning-25 {
+  color: $warning-25;
+}
+.color--warning-50 {
+  color: $warning-50;
+}
+.color--warning-100 {
+  color: $warning-100;
+}
+.color--warning-200 {
+  color: $warning-200;
+}
+.color--warning-300 {
+  color: $warning-300;
+}
+.color--warning-400 {
+  color: $warning-400;
+}
+.color--warning-500 {
+  color: $warning-500;
+}
+.color--warning-600 {
+  color: $warning-600;
+}
+.color--warning-700 {
+  color: $warning-700;
+}
+.color--warning-800 {
+  color: $warning-800;
+}
+.color--warning-900 {
+  color: $warning-900;
+}
+
+.color--success-25 {
+  color: $success-25;
+}
+.color--success-50 {
+  color: $success-50;
+}
+.color--success-100 {
+  color: $success-100;
+}
+.color--success-200 {
+  color: $success-200;
+}
+.color--success-300 {
+  color: $success-300;
+}
+.color--success-400 {
+  color: $success-400;
+}
+.color--success-500 {
+  color: $success-500;
+}
+.color--success-600 {
+  color: $success-600;
+}
+.color--success-700 {
+  color: $success-700;
+}
+.color--success-800 {
+  color: $success-800;
+}
+
+.color--plum-blue {
+  color: $plum-blue;
+}
+
+.color--pale-orange {
+  color: $pale-orange;
+}
+
+@include bottom-indent-classes();
+@include top-indent-classes();
+@include left-indent-classes();
+@include right-indent-classes();
+@include column-gap-classes();
+@include row-gap-classes();
